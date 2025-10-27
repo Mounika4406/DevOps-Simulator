@@ -1,0 +1,28 @@
+name: DevOps Simulator CI
+
+on:
+  push:
+    branches:
+      - main
+      - dev
+      - hotfix
+      - feature-deploy
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Display current version
+        run: |
+          echo "Building version:"
+          cat config/app-config.yaml
+
+      - name: Simulate build
+        run: |
+          echo "Running build process..."
+          sleep 2
+          echo "Build successful ✅"
