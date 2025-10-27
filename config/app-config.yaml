@@ -1,7 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 Version:1.0
 =======
 Version:2.0-dev
 >>>>>>> dev
 version:2.0
 version:1
+=======
+Version:conflict-branch
+>>>>>>> conflict-simulator
