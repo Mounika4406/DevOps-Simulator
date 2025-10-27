@@ -1,4 +1,4 @@
-name: DevOps Simulator CI
+name: DevOps Simulator CI/CD
 
 on:
   push:
@@ -26,3 +26,11 @@ jobs:
           echo "Running build process..."
           sleep 2
           echo "Build successful ✅"
+
+      - name: Simulate deployment
+        run: |
+          echo "Starting deployment..."
+          sleep 2
+          VERSION=$(cat config/app-config.yaml | cut -d' ' -f2)
+          echo "🚀 Deploying Version $VERSION to Production Environment!"
+          echo "✅ Deployment Complete."
